@@ -1,7 +1,7 @@
 import React from 'react';
 
 const getIcon = (code) => {
-    return `http://openweathermap.org/img/w/${code}.png`
+    return `https://openweathermap.org/img/w/${code}.png`
 }
 const getHour = (time) =>{
     return time.split(" ")[1];
