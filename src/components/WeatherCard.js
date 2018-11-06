@@ -43,7 +43,7 @@ const WeatherCard = (props) => {
     return <div className="weather-card">
         <div className="weather-card-item day">{getDayOfWeek(props.day.hours[0].dt)}</div>
         <div className="weather-card-item icon"><img src={getMidDayWeather(props.day.hours)} height="40" /></div>
-        <div className="weather-card-item hilow"> <span>{hi} </span> <span>{low}</span> </div>
+        <div className="weather-card-item hilow"> <span> <strong>{hi}</strong> </span> <span>{low}</span> </div>
         <div className="weather-card-item">  </div>
       
     </div>

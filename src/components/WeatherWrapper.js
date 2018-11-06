@@ -9,7 +9,6 @@ class WeatherWrapper extends Component {
         super(props);
 
         this.state ={
-            background:'rain',
             search:''
         }
     }
@@ -23,7 +22,7 @@ class WeatherWrapper extends Component {
 
     componentDidMount(){
          document.addEventListener("keydown", this.enterKey, false);
-         this.getForecasts();
+         //this.getForecasts();
     }
 
     getForecasts = () =>{
@@ -108,15 +107,23 @@ class WeatherWrapper extends Component {
 
     render(){
         return <div className={"weather-wrapper " + this.getWeatherBackground(this.props.groupId, this.props.icon) }>
-             {/* <h2> React Weather App</h2> */}
+            {
+                !this.state.forecasts && <div style={{color:"black"}}>Allow access to location, to get weather from location, or use the search...</div>
+            }
             <div className="location-name"> {this.props.location} </div>
             <input type="text" placeholder="ex: England,uk" value={this.state.search} onChange={this.handleChange}/>
-            { this.state.forecasts && <WeatherNow weather={this.state.forecasts[0].hours[0]} />}
-            { this.state.forecasts && <UpcomingWeather weather={this.state.forecasts} />}
-            
-            <div className="weather-card-wrapper">{ this.state.forecasts && 
-            this.state.forecasts.map( (day) => <WeatherCard key ={day.hours[0].dt} day={day}/>)
-            }</div>
+            {
+                this.state.forecasts &&  <WeatherNow weather={this.state.forecasts[0].hours[0]} />
+                                          
+            }
+            {
+                this.state.forecasts &&   <UpcomingWeather weather={this.state.forecasts} />
+            }
+            <div className="weather-card-wrapper">
+            {
+               this.state.forecasts && this.state.forecasts.map( (day) => <WeatherCard key ={day.hours[0].dt} day={day}/>)
+            }
+            </div>
             
 
             </div>

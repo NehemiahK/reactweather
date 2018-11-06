@@ -17,16 +17,17 @@ class App extends Component {
       let lat = pos.coords.latitude;
       let long = pos.coords.longitude;
       let key = 'ff853c451e3b2c454853556df1598d0c'
-           
+
       this.getWeatherData(lat,long,null);
-      this.setState({
-        mounted:true
-      })
+    
 
      }
     );
     }
-   
+    
+    this.setState({
+      mounted:true
+    })
   }
 
   getWeatherData = (lat,long,cityname) =>{
@@ -60,7 +61,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'> 
-      { this.state.gotit && 
+      { this.state.mounted && 
       <WeatherWrapper weather={this.state.weather} groupId={this.state.groupId} icon={this.state.icon} location={this.state.weather.location} getWeatherData={this.getWeatherData}/> 
       }
   </div> 
