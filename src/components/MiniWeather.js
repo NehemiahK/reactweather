@@ -21,7 +21,7 @@ const timeOnly = (time) => {
 }
 
 const getIcon = (code) => {
-    return `http://openweathermap.org/img/w/${code}.png`
+    return `https://openweathermap.org/img/w/${code}.png`
 }
 
 const MiniWeather = (props) => {
