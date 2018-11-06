@@ -1,0 +1,32 @@
+.weather-card{
+
+    max-width: 600px;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+/* html{
+    height: 100vh;
+} */
+.weather-card-item{
+    width:50px;
+}
+
+.weather-card-item.hilow{
+    position: absolute;
+    right:0px;
+    width:90px;
+    text-align: right;
+}
+
+.weather-card-item.hilow span{
+    margin: 0px 0px 0px 10px;
+    
+}
+.weather-card-item.icon{
+    margin: auto;
+}
+.weather-card-item.day{
+    position: absolute;
+    left:0px;
+}

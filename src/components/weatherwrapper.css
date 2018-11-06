@@ -1,0 +1,57 @@
+.weather-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px;
+    /* height: 100%; */
+}
+input
+{
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.weather-card-wrapper{
+    width:100%;
+    margin-top:40px;
+}
+html,body,#root,.App{
+    height:100%;
+}
+.location-name{
+    font-size:30px;
+}
+
+
+/* //Snow, Atmosphere, Clear, Clouds, Rain  all for day and night */ 
+
+.clear.day{
+    background: linear-gradient(to bottom left, #ff3300 0%, #ff9933 100%);
+  }
+  
+  .clear.night{
+    background: linear-gradient(to top, #000066 0%, #660066 100%);
+  }
+  
+  .clouds.day{
+    background: linear-gradient(to top, #ff9900 0%, #ffffff 100%);
+  }
+  .clouds.night{
+    background: linear-gradient(to bottom, #ffffff 0%, #000066 100%);
+  }
+  
+  .snow.night{
+    background: linear-gradient(to bottom right, #ccffff 0%, #9999ff 100%);
+  }
+  .snow.day{
+    background: linear-gradient(to bottom right, #ccffff 0%, #9999ff 100%);
+  }
+  .rain.day{
+    background: linear-gradient(to bottom left, #66ccff 0%, #3366cc 100%);
+  }
+  .rain.night{
+    background: linear-gradient(to bottom left, #66ccff 0%, #3366cc 100%);
+  }
+  
+  

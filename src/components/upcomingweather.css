@@ -1,0 +1,15 @@
+.upcoming-weather{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 130px;
+    justify-content: center;
+}
+/* 
+@media only screen and (max-width: 600px) {
+    .upcoming-weather{
+        margin-bottom:80px;
+       
+    }
+}
+ */
