@@ -8,7 +8,7 @@ const getHour = (time) =>{
 }
 
 const WeatherHour = (props) => {
-    //console.log(props);
+    //console.log(props
     return <div> 
         <img src={getIcon(props.weather.weather[0].icon)} height="100" />
         <div>{props.weather.main.temp}</div> 
